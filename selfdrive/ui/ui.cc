@@ -398,6 +398,14 @@ void UIState::update() {
   if (paramsMemory.getBool("FrogPilotTogglesUpdated")) {
     ui_update_params(this);
     emit uiUpdateFrogPilotParams();
+<<<<<<< HEAD
+=======
+    // Loop through twice so other parts of the code update first
+    if (toggles_checked) {
+      paramsMemory.putBool("FrogPilotTogglesUpdated", false);
+    }
+    toggles_checked = !toggles_checked;
+>>>>>>> a6055f290a26ae117815591af4efbe1dc587507c
   }
 
   // FrogPilot live variables that need to be constantly checked

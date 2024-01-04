@@ -68,7 +68,11 @@ QStringList getCarNames(const QString &dirPath, const QString &carMake) {
 
 FrogPilotVehiclesPanel::FrogPilotVehiclesPanel(SettingsWindow *parent) : ListWidget(parent) {
   selectMakeButton = new ButtonControl(tr("Select Make"), tr("SELECT"));
+<<<<<<< HEAD
   QObject::connect(selectMakeButton, &ButtonControl::clicked, [this]() {
+=======
+  connect(selectMakeButton, &ButtonControl::clicked, [this]() {
+>>>>>>> a6055f290a26ae117815591af4efbe1dc587507c
     std::string currentModel = params.get("CarMake");
     QStringList makes = {
       "Acura", "Audi", "BMW", "Buick", "Cadillac", "Chevrolet", "Chrysler", "Dodge", "Ford", "GM", "GMC",
@@ -87,7 +91,11 @@ FrogPilotVehiclesPanel::FrogPilotVehiclesPanel(SettingsWindow *parent) : ListWid
 
   selectModelButton = new ButtonControl(tr("Select Model"), tr("SELECT"));
   const QString modelSelection = QString::fromStdString(params.get("CarModel"));
+<<<<<<< HEAD
   QObject::connect(selectModelButton, &ButtonControl::clicked, [this]() {
+=======
+  connect(selectModelButton, &ButtonControl::clicked, [this]() {
+>>>>>>> a6055f290a26ae117815591af4efbe1dc587507c
     const std::string currentModel = params.get("CarModel");
     const QString newModelSelection = MultiOptionDialog::getSelection(tr("Select a Model"), models, QString::fromStdString(currentModel), this);
     if (!newModelSelection.isEmpty()) {
@@ -194,7 +202,11 @@ void FrogPilotVehiclesPanel::setDefaults() {
     {"LongPitch", FrogsGoMoo ? "0" : "1"},
     {"LowerVolt", FrogsGoMoo ? "0" : "1"},
     {"LockDoors", "0"},
+<<<<<<< HEAD
     {"SNGHack", FrogsGoMoo ? "0" : "1"},
+=======
+    {"SNGHack", "1"},
+>>>>>>> a6055f290a26ae117815591af4efbe1dc587507c
     {"TSS2Tune", "1"},
   };
 

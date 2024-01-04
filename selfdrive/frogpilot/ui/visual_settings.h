@@ -13,9 +13,16 @@ public:
 private:
   void hideEvent(QHideEvent *event);
   void hideSubToggles();
+<<<<<<< HEAD
   void parentToggleClicked();
   void setDefaults();
   void updateState();
+=======
+  void setDefaults();
+  void updateMetric();
+
+  ButtonControl *backButton;
+>>>>>>> a6055f290a26ae117815591af4efbe1dc587507c
 
   std::set<QString> customOnroadUIKeys;
   std::set<QString> customThemeKeys;
