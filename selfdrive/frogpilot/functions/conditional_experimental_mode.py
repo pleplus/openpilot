@@ -56,10 +56,15 @@ class ConditionalExperimentalMode:
     self.slow_lead_gmac = GenericMovingAverageCalculator(window_size=THRESHOLD)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     self.update_frogpilot_params()
 
 >>>>>>> a6055f290a26ae117815591af4efbe1dc587507c
+=======
+    self.update_frogpilot_params(self.params.get_bool("IsMetric"))
+
+>>>>>>> f0bfedfab75096a5817fee68bd0f0e2cfa5f4911
   def update(self, carState, frogpilotNavigation, modelData, radarState, v_ego, v_lead, mtsc_offset, vtsc_offset):
     # Set the current driving states
     lead = radarState.leadOne.status
