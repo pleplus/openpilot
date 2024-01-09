@@ -131,6 +131,7 @@ class RouteEngine:
       'steps': 'true',
       'banner_instructions': 'true',
       'alternatives': 'false',
+      'exclude': 'toll',
       'language': lang,
     }
 
